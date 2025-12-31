@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550">
+  <!-- Outer frame - top-left L -->
+  <path d="M 100 80 L 100 50 L 400 50" fill="none" stroke="#666" stroke-width="2.5"/>
+  <!-- Outer frame - left vertical -->
+  <path d="M 70 80 L 70 320" fill="none" stroke="#666" stroke-width="2.5"/>
+  
+  <!-- Inner frame - bottom-right L -->
+  <path d="M 400 320 L 400 350 L 100 350" fill="none" stroke="#666" stroke-width="2.5"/>
+  <!-- Inner frame - right vertical -->
+  <path d="M 430 80 L 430 320" fill="none" stroke="#666" stroke-width="2.5"/>
+  
+  <!-- 4 Building bars - diagonal arrangement from left-bottom to right-top -->
+  <g>
+    <!-- Bar 1 (leftmost, shortest) -->
+    <rect x="155" y="175" width="30" height="115" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    
+    <!-- Bar 2 -->
+    <rect x="200" y="130" width="30" height="160" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    
+    <!-- Bar 3 (tallest) -->
+    <rect x="245" y="85" width="30" height="205" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+    
+    <!-- Bar 4 (rightmost) -->
+    <rect x="290" y="145" width="30" height="145" fill="none" stroke="#1a1a1a" stroke-width="2.5"/>
+  </g>
+  
+  <!-- MEF Text -->
+  <text x="250" y="440" text-anchor="middle" fill="#1a1a1a" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="72" font-style="italic" letter-spacing="4">MEF</text>
+  
+  <!-- YAPI & İNŞAAT Text -->
+  <text x="250" y="490" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-weight="400" font-size="22" letter-spacing="10">YAPI &amp; İNŞAAT</text>
+</svg>

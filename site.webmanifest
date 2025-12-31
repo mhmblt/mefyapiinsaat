@@ -1,0 +1,24 @@
+{
+    "name": "MEF Yapı & İnşaat",
+    "short_name": "MEF Yapı",
+    "description": "İstanbul'un Premium İnşaat ve Müteahhitlik Firması",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "lang": "tr",
+    "categories": ["business", "construction"]
+}

@@ -1,0 +1,284 @@
+/* =============================================
+   MEF YAPI & İNŞAAT - RESPONSIVE STYLES
+   Mobile-First Approach
+   ============================================= */
+
+/* ============ TABLET (768px+) ============ */
+@media (min-width: 768px) {
+
+    /* Typography */
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--space-xl);
+    }
+
+    /* Header */
+    .header__logo img {
+        height: 50px;
+    }
+
+    /* Hero */
+    .hero__logo {
+        width: 150px;
+    }
+
+    .hero__title {
+        font-size: clamp(1.25rem, 2vw, 1.5rem);
+    }
+
+    .hero__slogan {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+
+    /* About Preview */
+    .about-preview__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-preview__content {
+        order: 1;
+    }
+
+    .about-preview__image {
+        order: 2;
+    }
+
+    /* Features */
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA */
+    .cta__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Instagram */
+    .instagram__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        text-align: left;
+    }
+
+    .footer__brand {
+        text-align: left;
+    }
+
+    .footer__social {
+        justify-content: flex-start;
+    }
+
+    /* Manifesto */
+    .manifesto-section__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .manifesto-section:nth-child(even) .manifesto-section__content {
+        order: 2;
+    }
+
+    .manifesto-section:nth-child(even) .manifesto-section__image {
+        order: 1;
+    }
+
+    /* Vision Gallery */
+    .vision-gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============ DESKTOP (1024px+) ============ */
+@media (min-width: 1024px) {
+
+    /* Header - Show Desktop Nav */
+    .nav {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .header__logo img {
+        height: 50px;
+    }
+
+    /* Hero */
+    .hero__logo {
+        width: 180px;
+    }
+
+    /* Features */
+    .features__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Instagram */
+    .instagram__grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+
+    /* Manifesto */
+    .manifesto-section__number {
+        font-size: 6rem;
+    }
+
+    /* Vision Gallery */
+    .vision-gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .vision-card--large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .vision-card--large .vision-card__image {
+        aspect-ratio: 1;
+    }
+}
+
+/* ============ LARGE DESKTOP (1400px+) ============ */
+@media (min-width: 1400px) {
+
+    /* Typography scaling */
+    html {
+        font-size: 18px;
+    }
+
+    /* Hero */
+    .hero__logo {
+        width: 200px;
+    }
+
+    .manifesto-section__number {
+        font-size: 8rem;
+    }
+}
+
+/* ============ EXTRA LARGE (1920px+) ============ */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .container--wide {
+        max-width: 1800px;
+    }
+}
+
+/* ============ MOTION PREFERENCES ============ */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ============ LANDSCAPE MOBILE ============ */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding: var(--space-4xl) 0;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+}
+
+/* ============ TOUCH DEVICES ============ */
+@media (hover: none) {
+
+    /* Remove hover effects for touch devices */
+    .nav__link::after {
+        display: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .vision-card__overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+    }
+
+    .vision-card:hover .vision-card__image {
+        filter: grayscale(100%);
+        transform: none;
+    }
+}
+
+/* ============ HIGH CONTRAST MODE ============ */
+@media (prefers-contrast: high) {
+    :root {
+        --color-grey: #999999;
+        --color-silver: #AAAAAA;
+        --color-light-grey: #444444;
+    }
+
+    .btn--outline,
+    .btn--ghost {
+        border-width: 2px;
+    }
+}
+
+/* ============ PRINT STYLES ============ */
+@media print {
+
+    .header,
+    .footer,
+    .whatsapp-btn,
+    .hero__video-container,
+    .hero__scroll,
+    .hamburger,
+    .mobile-menu {
+        display: none !important;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
