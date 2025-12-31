@@ -1855,7 +1855,7 @@ img {
         left: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        background-size: cover !important;
+        background-size: 160% auto !important;
         background-position: center center !important;
     }
 
