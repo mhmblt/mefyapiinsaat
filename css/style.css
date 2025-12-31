@@ -1820,3 +1820,31 @@ img {
 .bg-dark-grey {
     background-color: var(--color-dark-grey);
 }
+
+/* ============ MOBILE OPTIMIZATION ============ */
+@media screen and (max-width: 767px) {
+
+    /* Language Switcher - Compact for mobile */
+    .lang-switcher {
+        top: 10px;
+        left: 10px;
+        gap: 3px;
+    }
+
+    .lang-switcher__btn {
+        padding: 6px 8px;
+        font-size: 9px;
+        min-width: 28px;
+        min-height: 24px;
+    }
+
+    /* Hero - Mobile viewport fix */
+    .hero {
+        height: 100svh;
+        min-height: 100svh;
+    }
+
+    .hero__bg-image {
+        min-height: 100%;
+    }
+}
