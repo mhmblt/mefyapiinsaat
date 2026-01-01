@@ -139,6 +139,7 @@ const translations = {
         vision: {
             title: "Vizyon",
             subtitle: "Gelecek Projelerimiz & Konsept Tasarımlar",
+            comingSoon: "Çok Yakında",
             cta: {
                 title: "Hayalinizdeki Projeyi Birlikte Tasarlayalım",
                 text: "MEF Yapı olarak, sizin vizyonunuzu gerçeğe dönüştürmek için buradayız. İster villa, ister rezidans, ister ticari proje olsun; birlikte mükemmeli yaratacağız.",
@@ -311,6 +312,7 @@ const translations = {
         vision: {
             title: "Vision",
             subtitle: "Future Projects & Concept Designs",
+            comingSoon: "Coming Soon",
             cta: {
                 title: "Let's Design Your Dream Project Together",
                 text: "At MEF Yapı, we're here to turn your vision into reality. Whether it's a villa, residence, or commercial project; together we'll create perfection.",
@@ -483,6 +485,7 @@ const translations = {
         vision: {
             title: "Vision",
             subtitle: "Zukunftsprojekte & Konzeptdesigns",
+            comingSoon: "Demnächst",
             cta: {
                 title: "Lassen Sie uns Ihr Traumprojekt Gemeinsam Gestalten",
                 text: "Bei MEF Yapı sind wir hier, um Ihre Vision in die Realität umzusetzen. Ob Villa, Residenz oder Gewerbeprojekt; gemeinsam werden wir Perfektion schaffen.",
@@ -655,6 +658,7 @@ const translations = {
         vision: {
             title: "Видение",
             subtitle: "Будущие проекты и концептуальные дизайны",
+            comingSoon: "Скоро",
             cta: {
                 title: "Давайте вместе спроектируем проект вашей мечты",
                 text: "В MEF Yapı мы здесь, чтобы воплотить ваше видение в реальность. Будь то вилла, резиденция или коммерческий проект; вместе мы создадим совершенство.",
