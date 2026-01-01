@@ -65,13 +65,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
+    <!-- Preload Critical Resources for LCP -->
+    <link rel="preload" href="assets/images/hero-bg.png" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/mef-logo-transparent.png" as="image">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=23">
-    <link rel="stylesheet" href="css/animations.css?v=23">
-    <link rel="stylesheet" href="css/responsive.css?v=23">
+    <link rel="stylesheet" href="css/style.css?v=24">
+    <link rel="stylesheet" href="css/animations.css?v=24">
+    <link rel="stylesheet" href="css/responsive.css?v=24">
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -248,7 +252,8 @@
     <header class="header" id="header">
         <div class="container header__container">
             <a href="index.html" class="header__logo">
-                <img src="assets/images/mef-logo-transparent.png" alt="MEF Yapı & İnşaat" class="header__logo-img">
+                <img src="assets/images/mef-logo-transparent.png" alt="MEF Yapı & İnşaat" class="header__logo-img"
+                    width="120" height="80">
             </a>
             <nav class="nav">
                 <ul class="nav__list">
@@ -301,11 +306,14 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero__video-container">
-            <div class="hero__bg-image" style="background-image: url('assets/images/hero-bg.png');"></div>
+            <!-- LCP Image - Using img element instead of background-image for better LCP -->
+            <img src="assets/images/hero-bg.png" alt="MEF Yapı Modern Mimari" class="hero__bg-img" width="1920"
+                height="1080" fetchpriority="high" decoding="async">
             <div class="hero__overlay"></div>
         </div>
         <div class="hero__content">
-            <img src="assets/images/mef-logo-transparent.png" alt="MEF Yapı & İnşaat" class="hero__logo-img">
+            <img src="assets/images/mef-logo-transparent.png" alt="MEF Yapı & İnşaat" class="hero__logo-img" width="300"
+                height="200" fetchpriority="high">
             <h1 class="hero__slogan" data-i18n="hero.slogan">Geleceği Güvenle<br>İnşa Ediyoruz</h1>
         </div>
     </section>
@@ -589,10 +597,10 @@
         </svg>
     </a>
 
-    <script src="js/i18n.js?v=23"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/i18n.js?v=24" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
