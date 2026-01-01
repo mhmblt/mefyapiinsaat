@@ -76,12 +76,17 @@
         text-align: center !important;
     }
 
-    /* Logo mobilde büyük ve belirgin */
+    /* Logo mobilde kare oranı korunarak büyük ve belirgin */
     .hero__logo-img {
-        width: 320px !important;
-        max-width: 85% !important;
+        /* Kare logo - en boy oranı korunuyor */
+        width: 280px !important;
         height: auto !important;
-        margin: 0 auto var(--space-xl) !important;
+        max-width: 70vw !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: contain !important;
+        /* Margin ve konumlandırma */
+        margin: 0 auto var(--space-lg) !important;
+        display: block !important;
         /* Orijinal filter ayarları korunuyor */
         filter: invert(1) !important;
         mix-blend-mode: screen !important;
