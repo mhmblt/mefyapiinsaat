@@ -8,41 +8,48 @@
 
     /* Hero Section - Full Screen Mobile Optimization */
     .hero {
-        height: 100vh;
-        height: 100dvh;
-        /* Dynamic viewport height for mobile browsers */
-        min-height: -webkit-fill-available;
+        height: 100vh !important;
+        height: 100dvh !important;
+        min-height: -webkit-fill-available !important;
+        max-height: 100vh;
+        max-height: 100dvh;
     }
 
     .hero__video-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
     }
 
+    /* CRITICAL: Arka plan görseli mobil için tam ekran optimize */
     .hero__bg-image {
-        width: 100%;
-        height: 100%;
-        /* Görseli yakınlaştırarak mobil ekranı tamamen kaplamasını sağla */
-        background-size: 180% auto;
-        background-position: center center;
-        background-repeat: no-repeat;
-        /* Animasyonu koruyarak görselin mobilde de zoom yapmasını sağla */
-        animation: slowZoomMobile 20s ease-in-out infinite alternate;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        /* Görsel boyutlandırma - mobil dikey ekranı tamamen kapla */
+        background-size: auto 100% !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        /* Mobil için özel zoom animasyonu */
+        animation: slowZoomMobile 20s ease-in-out infinite alternate !important;
     }
 
     @keyframes slowZoomMobile {
         0% {
-            transform: scale(1);
-            background-size: 180% auto;
+            transform: scale(1.2);
         }
 
         100% {
-            transform: scale(1.05);
-            background-size: 195% auto;
+            transform: scale(1.35);
         }
     }
 
@@ -52,26 +59,26 @@
                 rgba(0, 0, 0, 0.4) 0%,
                 rgba(0, 0, 0, 0.3) 30%,
                 rgba(0, 0, 0, 0.4) 60%,
-                rgba(0, 0, 0, 0.7) 100%);
+                rgba(0, 0, 0, 0.7) 100%) !important;
     }
 
     /* Hero içerik mobil için daha iyi konumlandırma */
     .hero__content {
-        padding: var(--space-lg);
-        padding-top: 20vh;
+        padding: var(--space-lg) !important;
+        padding-top: 15vh !important;
     }
 
     /* Logo mobilde biraz daha küçük */
     .hero__logo-img {
-        width: 280px;
-        max-width: 75%;
-        margin-bottom: var(--space-xl);
+        width: 280px !important;
+        max-width: 75% !important;
+        margin-bottom: var(--space-xl) !important;
     }
 
     /* Slogan mobilde daha okunabilir */
     .hero__slogan {
-        font-size: clamp(1.5rem, 6vw, 2rem);
-        line-height: 1.3;
+        font-size: clamp(1.5rem, 6vw, 2rem) !important;
+        line-height: 1.3 !important;
     }
 
     /* Language switcher mobilde gizle (hamburger menüde gösterilecek) */
@@ -81,7 +88,7 @@
 
     /* Mobile Language Switcher - hamburger menüde göster */
     .mobile-lang-switcher {
-        display: flex;
+        display: flex !important;
         gap: 0.75rem;
         justify-content: center;
         margin-top: var(--space-xl);
@@ -100,28 +107,26 @@
 /* ============ VERY SMALL MOBILE (max 375px) ============ */
 @media (max-width: 375px) {
     .hero__bg-image {
-        /* Çok küçük ekranlar için daha fazla yakınlaştırma */
-        background-size: 220% auto;
+        /* Çok küçük ekranlar için daha fazla scale */
+        background-size: auto 100% !important;
     }
 
     @keyframes slowZoomMobile {
         0% {
-            transform: scale(1);
-            background-size: 220% auto;
+            transform: scale(1.3);
         }
 
         100% {
-            transform: scale(1.05);
-            background-size: 240% auto;
+            transform: scale(1.5);
         }
     }
 
     .hero__logo-img {
-        width: 220px;
+        width: 220px !important;
     }
 
     .hero__slogan {
-        font-size: clamp(1.25rem, 5vw, 1.75rem);
+        font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
     }
 }
 
