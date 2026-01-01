@@ -3,6 +3,128 @@
    Mobile-First Approach
    ============================================= */
 
+/* ============ MOBILE (max 767px) - Hero Background Fix ============ */
+@media (max-width: 767px) {
+
+    /* Hero Section - Full Screen Mobile Optimization */
+    .hero {
+        height: 100vh;
+        height: 100dvh;
+        /* Dynamic viewport height for mobile browsers */
+        min-height: -webkit-fill-available;
+    }
+
+    .hero__video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .hero__bg-image {
+        width: 100%;
+        height: 100%;
+        /* Görseli yakınlaştırarak mobil ekranı tamamen kaplamasını sağla */
+        background-size: 180% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        /* Animasyonu koruyarak görselin mobilde de zoom yapmasını sağla */
+        animation: slowZoomMobile 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes slowZoomMobile {
+        0% {
+            transform: scale(1);
+            background-size: 180% auto;
+        }
+
+        100% {
+            transform: scale(1.05);
+            background-size: 195% auto;
+        }
+    }
+
+    /* Hero overlay mobil için optimize edilmiş gradient */
+    .hero__overlay {
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.4) 0%,
+                rgba(0, 0, 0, 0.3) 30%,
+                rgba(0, 0, 0, 0.4) 60%,
+                rgba(0, 0, 0, 0.7) 100%);
+    }
+
+    /* Hero içerik mobil için daha iyi konumlandırma */
+    .hero__content {
+        padding: var(--space-lg);
+        padding-top: 20vh;
+    }
+
+    /* Logo mobilde biraz daha küçük */
+    .hero__logo-img {
+        width: 280px;
+        max-width: 75%;
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Slogan mobilde daha okunabilir */
+    .hero__slogan {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.3;
+    }
+
+    /* Language switcher mobilde gizle (hamburger menüde gösterilecek) */
+    .lang-switcher {
+        display: none !important;
+    }
+
+    /* Mobile Language Switcher - hamburger menüde göster */
+    .mobile-lang-switcher {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        margin-top: var(--space-xl);
+        padding-top: var(--space-lg);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-lang-switcher .lang-switcher__btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+        min-width: 44px;
+        min-height: 36px;
+    }
+}
+
+/* ============ VERY SMALL MOBILE (max 375px) ============ */
+@media (max-width: 375px) {
+    .hero__bg-image {
+        /* Çok küçük ekranlar için daha fazla yakınlaştırma */
+        background-size: 220% auto;
+    }
+
+    @keyframes slowZoomMobile {
+        0% {
+            transform: scale(1);
+            background-size: 220% auto;
+        }
+
+        100% {
+            transform: scale(1.05);
+            background-size: 240% auto;
+        }
+    }
+
+    .hero__logo-img {
+        width: 220px;
+    }
+
+    .hero__slogan {
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
+    }
+}
+
 /* ============ TABLET (768px+) ============ */
 @media (min-width: 768px) {
 
