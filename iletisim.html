@@ -39,9 +39,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=11">
-    <link rel="stylesheet" href="css/animations.css?v=11">
-    <link rel="stylesheet" href="css/responsive.css?v=11">
+    <link rel="stylesheet" href="css/style.css?v=12">
+    <link rel="stylesheet" href="css/animations.css?v=12">
+    <link rel="stylesheet" href="css/responsive.css?v=12">
 
     <!-- Structured Data - ContactPage -->
     <script type="application/ld+json">
@@ -167,17 +167,20 @@
                         <div class="form-group">
                             <label class="form-label" for="name" data-i18n="contactPage.form.name">Ad Soyad</label>
                             <input type="text" class="form-input" id="name" name="name" required
-                                placeholder="Adınız ve soyadınız">
+                                placeholder="Adınız ve soyadınız"
+                                data-i18n-placeholder="contactPage.form.placeholders.name">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="email" data-i18n="contactPage.form.email">E-posta</label>
                             <input type="email" class="form-input" id="email" name="email" required
-                                placeholder="ornek@email.com">
+                                placeholder="ornek@email.com"
+                                data-i18n-placeholder="contactPage.form.placeholders.email">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="phone" data-i18n="contactPage.form.phone">Telefon</label>
                             <input type="tel" class="form-input" id="phone" name="phone"
-                                placeholder="+90 (5XX) XXX XX XX">
+                                placeholder="+90 (5XX) XXX XX XX"
+                                data-i18n-placeholder="contactPage.form.placeholders.phone">
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="subject" data-i18n="contactPage.form.subject">Konu</label>
@@ -200,7 +203,8 @@
                             <label class="form-label" for="message"
                                 data-i18n="contactPage.form.message">Mesajınız</label>
                             <textarea class="form-textarea" id="message" name="message" required
-                                placeholder="Projeniz hakkında bize bilgi verin..."></textarea>
+                                placeholder="Projeniz hakkında bize bilgi verin..."
+                                data-i18n-placeholder="contactPage.form.placeholders.message"></textarea>
                         </div>
                         <button type="submit" class="btn btn--primary" id="submitBtn" style="width: 100%;">
                             <span class="btn-text" data-i18n="contactPage.form.submit">Mesajı Gönder</span>
@@ -312,7 +316,7 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <img src="assets/images/mef-logo-transparent.png" alt="MEF Yapı & İnşaat" class="footer__logo-img">
-                    <p class="footer__tagline">Geleceği Güvenle İnşa Ediyoruz</p>
+                    <p class="footer__tagline" data-i18n="footer.tagline">Geleceği Güvenle İnşa Ediyoruz</p>
                 </div>
                 <div class="footer__section">
                     <h4 class="footer__section-title" data-i18n="footer.pages">Sayfalar</h4>
@@ -363,7 +367,7 @@
         </svg>
     </a>
 
-    <script src="js/i18n.js?v=11"></script>
+    <script src="js/i18n.js?v=12"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>

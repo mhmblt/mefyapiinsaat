@@ -742,6 +742,15 @@ class LanguageManager {
             }
         });
 
+        // Update placeholder translations
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.dataset.i18nPlaceholder;
+            const translation = this.getNestedTranslation(translations[lang], key);
+            if (translation) {
+                el.placeholder = translation;
+            }
+        });
+
         // Update active state on language switcher
         document.querySelectorAll('[data-lang-switch]').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.langSwitch === lang);
