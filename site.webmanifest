@@ -1,8 +1,9 @@
 {
     "name": "MEF Yapı & İnşaat",
     "short_name": "MEF Yapı",
-    "description": "İstanbul'un Premium İnşaat ve Müteahhitlik Firması",
-    "start_url": "/",
+    "description": "Muğla'nın Premium İnşaat ve Müteahhitlik Firması",
+    "start_url": "https://www.mefyapitr.com/",
+    "scope": "https://www.mefyapitr.com/",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#000000",
@@ -20,5 +21,8 @@
         }
     ],
     "lang": "tr",
-    "categories": ["business", "construction"]
+    "categories": [
+        "business",
+        "construction"
+    ]
 }
