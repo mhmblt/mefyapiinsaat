@@ -1017,14 +1017,13 @@ img {
     filter: grayscale(100%);
 }
 
-.hero__bg-image,
-.hero__bg-img {
+.hero__bg-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
     filter: grayscale(100%);
     animation: slowZoom 20s ease-in-out infinite alternate;
-    will-change: transform;
 }
 
 @keyframes slowZoom {
