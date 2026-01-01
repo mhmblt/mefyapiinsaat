@@ -636,11 +636,61 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-premium);
+    overflow: hidden;
+}
+
+/* Mobile Menu - Blueprint Grid Arka Plan */
+.mobile-menu::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+/* Mobile Menu - Radial Gradient Overlay */
+.mobile-menu::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
 .mobile-menu.active {
     opacity: 1;
     visibility: visible;
+}
+
+.mobile-menu.active::before {
+    opacity: 1;
+    animation: menuGridReveal 1s ease forwards;
+}
+
+.mobile-menu.active::after {
+    opacity: 1;
+}
+
+@keyframes menuGridReveal {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .mobile-menu__list {
@@ -681,6 +731,250 @@ img {
     font-weight: var(--font-weight-bold);
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+}
+
+.mobile-menu__link::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%);
+    transition: width 0.3s ease;
+}
+
+.mobile-menu__link:hover::before {
+    width: 15px;
+}
+
+.mobile-menu__link:hover {
+    color: var(--color-white);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Menu Corner Decorations */
+.mobile-menu__decoration {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.mobile-menu.active .mobile-menu__decoration {
+    opacity: 1;
+}
+
+.mobile-menu__decoration::before,
+.mobile-menu__decoration::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Top-Left */
+.mobile-menu__decoration--tl {
+    top: 30px;
+    left: 30px;
+}
+
+.mobile-menu__decoration--tl::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+}
+
+.mobile-menu__decoration--tl::after {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+}
+
+.mobile-menu.active .mobile-menu__decoration--tl::before {
+    animation: menuCornerH 0.5s ease forwards 0.3s;
+}
+
+.mobile-menu.active .mobile-menu__decoration--tl::after {
+    animation: menuCornerV 0.5s ease forwards 0.4s;
+}
+
+/* Top-Right */
+.mobile-menu__decoration--tr {
+    top: 30px;
+    right: 30px;
+}
+
+.mobile-menu__decoration--tr::before {
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+}
+
+.mobile-menu__decoration--tr::after {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+}
+
+.mobile-menu.active .mobile-menu__decoration--tr::before {
+    animation: menuCornerH 0.5s ease forwards 0.5s;
+}
+
+.mobile-menu.active .mobile-menu__decoration--tr::after {
+    animation: menuCornerV 0.5s ease forwards 0.6s;
+}
+
+/* Bottom-Left */
+.mobile-menu__decoration--bl {
+    bottom: 100px;
+    left: 30px;
+}
+
+.mobile-menu__decoration--bl::before {
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+}
+
+.mobile-menu__decoration--bl::after {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+}
+
+.mobile-menu.active .mobile-menu__decoration--bl::before {
+    animation: menuCornerH 0.5s ease forwards 0.7s;
+}
+
+.mobile-menu.active .mobile-menu__decoration--bl::after {
+    animation: menuCornerV 0.5s ease forwards 0.8s;
+}
+
+/* Bottom-Right */
+.mobile-menu__decoration--br {
+    bottom: 100px;
+    right: 30px;
+}
+
+.mobile-menu__decoration--br::before {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+}
+
+.mobile-menu__decoration--br::after {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+}
+
+.mobile-menu.active .mobile-menu__decoration--br::before {
+    animation: menuCornerH 0.5s ease forwards 0.9s;
+}
+
+.mobile-menu.active .mobile-menu__decoration--br::after {
+    animation: menuCornerV 0.5s ease forwards 1s;
+}
+
+/* Menu Corner Keyframes */
+@keyframes menuCornerH {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes menuCornerV {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 50px;
+        opacity: 1;
+    }
+}
+
+/* Mobile Menu Animated Lines */
+.mobile-menu__line {
+    position: absolute;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+}
+
+.mobile-menu.active .mobile-menu__line {
+    opacity: 1;
+}
+
+.mobile-menu__line--h {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scaleX(0);
+}
+
+.mobile-menu.active .mobile-menu__line--h {
+    animation: menuLineH 1.5s ease forwards 0.5s;
+}
+
+.mobile-menu__line--v {
+    width: 1px;
+    height: 60%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) scaleY(0);
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.mobile-menu.active .mobile-menu__line--v {
+    animation: menuLineV 1.5s ease forwards 0.7s;
+}
+
+@keyframes menuLineH {
+    0% {
+        transform: translateY(-50%) scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-50%) scaleX(1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes menuLineV {
+    0% {
+        transform: translateX(-50%) scaleY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-50%) scaleY(1);
+        opacity: 0.5;
+    }
 }
 
 /* ============ HERO SECTION ============ */
