@@ -1,12 +1,12 @@
 # MEF Yapı & İnşaat - Robots.txt
-# https://mefyapi.com/robots.txt
+# https://mefyapitr.com/robots.txt
 
 # Allow all crawlers
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mefyapi.com/sitemap.xml
+Sitemap: https://mefyapitr.com/sitemap.xml
 
 # Crawl-delay for politeness
 Crawl-delay: 1

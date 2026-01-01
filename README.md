@@ -97,7 +97,7 @@ npx serve .
 
 ## 📞 İletişim
 
-- **Web:** [mefyapi.com](https://mefyapi.com)
+- **Web:** [mefyapitr.com](https://mefyapitr.com)
 - **E-posta:** info.mefyapi@gmail.com
 - **Telefon:** +90 (546) 910 80 52
 - **Konum:** Dalaman, Muğla, Türkiye

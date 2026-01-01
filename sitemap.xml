@@ -7,12 +7,12 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://mefyapi.com/</loc>
+        <loc>https://mefyapitr.com/</loc>
         <lastmod>2025-12-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://mefyapi.com/assets/images/mef-logo-transparent.png</image:loc>
+            <image:loc>https://mefyapitr.com/assets/images/mef-logo-transparent.png</image:loc>
             <image:title>MEF Yapı & İnşaat Logo</image:title>
             <image:caption>İstanbul'un Premium İnşaat Firması</image:caption>
         </image:image>
@@ -20,7 +20,7 @@
     
     <!-- Hakkımızda Page -->
     <url>
-        <loc>https://mefyapi.com/hakkimizda.html</loc>
+        <loc>https://mefyapitr.com/hakkimizda.html</loc>
         <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -28,7 +28,7 @@
     
     <!-- Kurumsal Page -->
     <url>
-        <loc>https://mefyapi.com/kurumsal.html</loc>
+        <loc>https://mefyapitr.com/kurumsal.html</loc>
         <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -36,7 +36,7 @@
     
     <!-- Vizyon Page -->
     <url>
-        <loc>https://mefyapi.com/vizyon.html</loc>
+        <loc>https://mefyapitr.com/vizyon.html</loc>
         <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -44,7 +44,7 @@
     
     <!-- İletişim Page -->
     <url>
-        <loc>https://mefyapi.com/iletisim.html</loc>
+        <loc>https://mefyapitr.com/iletisim.html</loc>
         <lastmod>2025-12-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
