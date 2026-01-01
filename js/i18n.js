@@ -11,6 +11,17 @@ const translations = {
             vision: "Vizyon",
             contact: "İletişim"
         },
+        // Instagram
+        instagram: {
+            followButton: "Instagram'da Takip Et"
+        },
+        // SEO Meta Tags
+        seo: {
+            title: "MEF Yapı & İnşaat | Muğla'nın Premium İnşaat ve Müteahhitlik Firması",
+            description: "MEF Yapı & İnşaat - Muğla merkezli premium inşaat firması. Dalaman, Ortaca, Fethiye ve çevresinde lüks villa, rezidans, ticari yapı ve anahtar teslim inşaat projeleri.",
+            ogTitle: "MEF Yapı & İnşaat | Muğla'nın Premium İnşaat Firması",
+            ogDescription: "Lüks villa, rezidans ve ticari yapı inşaatı. Muğla'nın güvenilir müteahhidi. Geleceği güvenle inşa ediyoruz."
+        },
         // Hero Section
         hero: {
             slogan: "Geleceği Güvenle<br>İnşa Ediyoruz"
@@ -183,6 +194,17 @@ const translations = {
             corporate: "Corporate",
             vision: "Vision",
             contact: "Contact"
+        },
+        // Instagram
+        instagram: {
+            followButton: "Follow on Instagram"
+        },
+        // SEO Meta Tags
+        seo: {
+            title: "MEF Yapı & İnşaat | Premium Construction Company in Muğla, Turkey",
+            description: "MEF Yapı & İnşaat - Premium construction company based in Muğla. Luxury villas, residences, commercial buildings and turnkey construction projects in Dalaman, Ortaca, Fethiye and surrounding areas.",
+            ogTitle: "MEF Yapı & İnşaat | Premium Construction Company in Turkey",
+            ogDescription: "Luxury villa, residence and commercial building construction. Muğla's trusted contractor. Building the future with confidence."
         },
         // Hero Section
         hero: {
@@ -357,6 +379,17 @@ const translations = {
             vision: "Vision",
             contact: "Kontakt"
         },
+        // Instagram
+        instagram: {
+            followButton: "Auf Instagram folgen"
+        },
+        // SEO Meta Tags
+        seo: {
+            title: "MEF Yapı & İnşaat | Premium Bauunternehmen in Muğla, Türkei",
+            description: "MEF Yapı & İnşaat - Premium Bauunternehmen mit Sitz in Muğla. Luxusvillen, Residenzen, Gewerbegebäude und schlüsselfertige Bauprojekte in Dalaman, Ortaca, Fethiye und Umgebung.",
+            ogTitle: "MEF Yapı & İnşaat | Premium Bauunternehmen in der Türkei",
+            ogDescription: "Luxusvilla-, Residenz- und Gewerbebau. Muğlas vertrauenswürdiger Bauunternehmer. Die Zukunft sicher bauen."
+        },
         // Hero Section
         hero: {
             slogan: "Die Zukunft<br>Sicher Bauen"
@@ -529,6 +562,17 @@ const translations = {
             corporate: "Компания",
             vision: "Видение",
             contact: "Контакты"
+        },
+        // Instagram
+        instagram: {
+            followButton: "Подписаться в Instagram"
+        },
+        // SEO Meta Tags
+        seo: {
+            title: "MEF Yapı & İnşaat | Премиальная строительная компания в Мугла, Турция",
+            description: "MEF Yapı & İnşaat - Премиальная строительная компания в Мугла. Роскошные виллы, резиденции, коммерческие здания и проекты под ключ в Даламане, Ортадже, Фетхие и окрестностях.",
+            ogTitle: "MEF Yapı & İnşaat | Премиальная строительная компания в Турции",
+            ogDescription: "Строительство роскошных вилл, резиденций и коммерческих зданий. Надёжный подрядчик Муглы. Строим будущее с уверенностью."
         },
         // Hero Section
         hero: {
@@ -759,6 +803,30 @@ class LanguageManager {
         document.querySelectorAll('[data-lang-switch]').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.langSwitch === lang);
         });
+
+        // Update SEO Meta Tags dynamically
+        const seo = translations[lang]?.seo;
+        if (seo) {
+            // Update title
+            if (seo.title) {
+                document.title = seo.title;
+            }
+            // Update meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && seo.description) {
+                metaDesc.content = seo.description;
+            }
+            // Update OG title
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle && seo.ogTitle) {
+                ogTitle.content = seo.ogTitle;
+            }
+            // Update OG description
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc && seo.ogDescription) {
+                ogDesc.content = seo.ogDescription;
+            }
+        }
 
         // Dispatch custom event
         window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
