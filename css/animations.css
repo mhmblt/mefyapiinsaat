@@ -990,13 +990,134 @@
     }
 }
 
-/* Hide decorations on mobile for performance */
+/* ============ MOBILE OPTIMIZED DECORATIONS ============ */
 @media (max-width: 768px) {
 
-    .frame-decoration,
-    .geo-float,
-    .blueprint-grid,
+    /* Blueprint Grid - Mobil için daha ince çizgiler ve küçük ızgara */
+    .blueprint-grid {
+        display: block !important;
+        opacity: 0;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+        background-size: 30px 30px;
+        /* Mobil için daha küçük grid */
+        animation: blueprintFade 3s ease forwards;
+        animation-delay: 0.5s;
+    }
+
+    /* Frame Decorations - Mobil için küçültülmüş köşe süslemeleri */
+    .frame-decoration {
+        display: block !important;
+    }
+
+    .frame-decoration--tl {
+        top: 15px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .frame-decoration--tr {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .frame-decoration--bl {
+        bottom: 80px;
+        /* WhatsApp butonuna alan bırak */
+        left: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .frame-decoration--br {
+        bottom: 80px;
+        /* WhatsApp butonuna alan bırak */
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Frame line animasyonları mobil için */
+    .frame-decoration--tl::before,
+    .frame-decoration--tr::before,
+    .frame-decoration--bl::before,
+    .frame-decoration--br::before {
+        animation: frameLineHorizontalMobile 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .frame-decoration--tl::after,
+    .frame-decoration--tr::after,
+    .frame-decoration--bl::after,
+    .frame-decoration--br::after {
+        animation: frameLineVerticalMobile 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes frameLineHorizontalMobile {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+
+        100% {
+            width: 40px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes frameLineVerticalMobile {
+        0% {
+            height: 0;
+            opacity: 0;
+        }
+
+        100% {
+            height: 40px;
+            opacity: 1;
+        }
+    }
+
+    /* Geo Float - Mobil için sadece 2 tane ve daha küçük */
+    .geo-float {
+        display: block !important;
+    }
+
+    .geo-float--1 {
+        top: 25%;
+        left: 3%;
+        width: 35px;
+        height: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .geo-float--2 {
+        top: 55%;
+        right: 3%;
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Diğer geo-float ve progress line mobilde gizle - performans için */
+    .geo-float--3,
+    .geo-float--4 {
+        display: none !important;
+    }
+
+    /* Progress lines - Mobil için tek çizgi ve daha hafif */
     .progress-line {
-        display: none;
+        display: block !important;
+    }
+
+    .progress-line--top {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+    }
+
+    .progress-line--bottom {
+        display: none !important;
+        /* Alt satır mobilde gereksiz */
     }
 }
