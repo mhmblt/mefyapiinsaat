@@ -35,8 +35,8 @@
         bottom: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        /* Görsel boyutlandırma - mobil dikey ekranı tamamen kapla */
-        background-size: auto 100% !important;
+        /* Görsel boyutlandırma - görseli dikeyde %180 büyüterek siyah alanları ekran dışına it */
+        background-size: auto 180% !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
         /* Mobil için özel zoom animasyonu */
@@ -45,11 +45,11 @@
 
     @keyframes slowZoomMobile {
         0% {
-            transform: scale(1.2);
+            transform: scale(1);
         }
 
         100% {
-            transform: scale(1.35);
+            transform: scale(1.1);
         }
     }
 
@@ -107,8 +107,8 @@
 /* ============ VERY SMALL MOBILE (max 375px) ============ */
 @media (max-width: 375px) {
     .hero__bg-image {
-        /* Çok küçük ekranlar için daha fazla scale */
-        background-size: auto 100% !important;
+        /* Çok küçük ekranlar için daha fazla yakınlaştırma */
+        background-size: auto 200% !important;
     }
 
     @keyframes slowZoomMobile {
