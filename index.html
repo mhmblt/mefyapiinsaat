@@ -69,9 +69,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=22">
-    <link rel="stylesheet" href="css/animations.css?v=22">
-    <link rel="stylesheet" href="css/responsive.css?v=22">
+    <link rel="stylesheet" href="css/style.css?v=23">
+    <link rel="stylesheet" href="css/animations.css?v=23">
+    <link rel="stylesheet" href="css/responsive.css?v=23">
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -193,9 +193,33 @@
         "@type": "WebSite",
         "name": "MEF Yapı & İnşaat",
         "url": "https://www.mefyapitr.com",
-        "description": "Premium inşaat ve müteahhitlik hizmetleri"
+        "description": "Premium inşaat ve müteahhitlik hizmetleri",
+        "publisher": {
+            "@type": "Organization",
+            "name": "MEF Yapı & İnşaat"
+        },
+        "inLanguage": ["tr", "en", "de", "ru"]
     }
     </script>
+
+    <!-- Structured Data - BreadcrumbList for Homepage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Anasayfa",
+            "item": "https://www.mefyapitr.com/"
+        }]
+    }
+    </script>
+
+    <!-- Security & Performance Meta Tags -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-DNS-Prefetch-Control" content="on">
 </head>
 
 <body>
@@ -565,7 +589,7 @@
         </svg>
     </a>
 
-    <script src="js/i18n.js?v=22"></script>
+    <script src="js/i18n.js?v=23"></script>
     <script src="js/navigation.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
