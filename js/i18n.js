@@ -13,7 +13,9 @@ const translations = {
         },
         // Instagram
         instagram: {
-            followButton: "Instagram'da Takip Et"
+            followButton: "Instagram'da Takip Et",
+            title: "@mefyapi",
+            subtitle: "Instagram'da bizi takip edin"
         },
         // SEO Meta Tags
         seo: {
@@ -61,11 +63,7 @@ const translations = {
             contact: "İletişim",
             contactDesc: "Bizimle iletişime geçin"
         },
-        // Instagram
-        instagram: {
-            title: "@mefyapi",
-            subtitle: "Instagram'da bizi takip edin"
-        },
+
         // Footer
         footer: {
             tagline: "Geleceği Güvenle İnşa Ediyoruz",
@@ -197,7 +195,9 @@ const translations = {
         },
         // Instagram
         instagram: {
-            followButton: "Follow on Instagram"
+            followButton: "Follow on Instagram",
+            title: "@mefyapi",
+            subtitle: "Follow us on Instagram"
         },
         // SEO Meta Tags
         seo: {
@@ -245,11 +245,7 @@ const translations = {
             contact: "Contact",
             contactDesc: "Get in touch with us"
         },
-        // Instagram
-        instagram: {
-            title: "@mefyapi",
-            subtitle: "Follow us on Instagram"
-        },
+
         // Footer
         footer: {
             tagline: "Building the Future with Confidence",
@@ -381,7 +377,9 @@ const translations = {
         },
         // Instagram
         instagram: {
-            followButton: "Auf Instagram folgen"
+            followButton: "Auf Instagram folgen",
+            title: "@mefyapi",
+            subtitle: "Folgen Sie uns auf Instagram"
         },
         // SEO Meta Tags
         seo: {
@@ -429,11 +427,7 @@ const translations = {
             contact: "Kontakt",
             contactDesc: "Nehmen Sie Kontakt mit uns auf"
         },
-        // Instagram
-        instagram: {
-            title: "@mefyapi",
-            subtitle: "Folgen Sie uns auf Instagram"
-        },
+
         // Footer
         footer: {
             tagline: "Die Zukunft Sicher Bauen",
@@ -565,7 +559,9 @@ const translations = {
         },
         // Instagram
         instagram: {
-            followButton: "Подписаться в Instagram"
+            followButton: "Подписаться в Instagram",
+            title: "@mefyapi",
+            subtitle: "Подписывайтесь на нас в Instagram"
         },
         // SEO Meta Tags
         seo: {
@@ -613,11 +609,7 @@ const translations = {
             contact: "Контакты",
             contactDesc: "Свяжитесь с нами"
         },
-        // Instagram
-        instagram: {
-            title: "@mefyapi",
-            subtitle: "Подписывайтесь на нас в Instagram"
-        },
+
         // Footer
         footer: {
             tagline: "Строим будущее с уверенностью",
