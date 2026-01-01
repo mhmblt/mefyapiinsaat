@@ -60,7 +60,15 @@ const translations = {
             tagline: "Geleceği Güvenle İnşa Ediyoruz",
             pages: "Sayfalar",
             contact: "İletişim",
-            copyright: "© 2025 MEF Yapı & İnşaat. Tüm hakları saklıdır."
+            followUs: "Bizi Takip Edin",
+            copyright: "© 2025 MEF Yapı & İnşaat. Tüm hakları saklıdır.",
+            links: {
+                home: "Anasayfa",
+                about: "Hakkımızda",
+                corporate: "Kurumsal",
+                vision: "Vizyon",
+                contact: "İletişim"
+            }
         },
         // Contact Page
         contactPage: {
@@ -71,8 +79,33 @@ const translations = {
                 name: "Ad Soyad",
                 email: "E-posta",
                 phone: "Telefon",
+                subject: "Konu",
                 message: "Mesajınız",
-                submit: "Gönder"
+                submit: "Mesajı Gönder",
+                selectSubject: "Konu Seçiniz",
+                subjects: {
+                    quote: "Proje Teklifi Almak İstiyorum",
+                    villa: "Villa İnşaatı",
+                    commercial: "Ticari Yapı",
+                    renovation: "Tadilat / Renovasyon",
+                    general: "Genel Bilgi",
+                    other: "Diğer"
+                },
+                placeholders: {
+                    name: "Adınız ve soyadınız",
+                    email: "ornek@email.com",
+                    phone: "+90 (5XX) XXX XX XX",
+                    message: "Projeniz hakkında bize bilgi verin..."
+                },
+                success: {
+                    title: "Mesajınız Gönderildi!",
+                    text: "En kısa sürede sizinle iletişime geçeceğiz."
+                },
+                error: {
+                    title: "Bir Hata Oluştu",
+                    text: "Lütfen tekrar deneyin veya bizi arayın."
+                },
+                sending: "Gönderiliyor..."
             },
             info: {
                 address: "Adres",
@@ -199,7 +232,15 @@ const translations = {
             tagline: "Building the Future with Confidence",
             pages: "Pages",
             contact: "Contact",
-            copyright: "© 2025 MEF Yapı & İnşaat. All rights reserved."
+            followUs: "Follow Us",
+            copyright: "© 2025 MEF Yapı & İnşaat. All rights reserved.",
+            links: {
+                home: "Home",
+                about: "About Us",
+                corporate: "Corporate",
+                vision: "Vision",
+                contact: "Contact"
+            }
         },
         // Contact Page
         contactPage: {
@@ -210,8 +251,33 @@ const translations = {
                 name: "Full Name",
                 email: "Email",
                 phone: "Phone",
+                subject: "Subject",
                 message: "Your Message",
-                submit: "Send"
+                submit: "Send Message",
+                selectSubject: "Select Subject",
+                subjects: {
+                    quote: "Request a Project Quote",
+                    villa: "Villa Construction",
+                    commercial: "Commercial Building",
+                    renovation: "Renovation / Remodeling",
+                    general: "General Inquiry",
+                    other: "Other"
+                },
+                placeholders: {
+                    name: "Your full name",
+                    email: "example@email.com",
+                    phone: "+90 (5XX) XXX XX XX",
+                    message: "Tell us about your project..."
+                },
+                success: {
+                    title: "Message Sent!",
+                    text: "We will get back to you as soon as possible."
+                },
+                error: {
+                    title: "An Error Occurred",
+                    text: "Please try again or call us."
+                },
+                sending: "Sending..."
             },
             info: {
                 address: "Address",
@@ -338,7 +404,15 @@ const translations = {
             tagline: "Die Zukunft Sicher Bauen",
             pages: "Seiten",
             contact: "Kontakt",
-            copyright: "© 2025 MEF Yapı & İnşaat. Alle Rechte vorbehalten."
+            followUs: "Folgen Sie Uns",
+            copyright: "© 2025 MEF Yapı & İnşaat. Alle Rechte vorbehalten.",
+            links: {
+                home: "Startseite",
+                about: "Über Uns",
+                corporate: "Unternehmen",
+                vision: "Vision",
+                contact: "Kontakt"
+            }
         },
         // Contact Page
         contactPage: {
@@ -349,8 +423,33 @@ const translations = {
                 name: "Vollständiger Name",
                 email: "E-Mail",
                 phone: "Telefon",
+                subject: "Betreff",
                 message: "Ihre Nachricht",
-                submit: "Senden"
+                submit: "Nachricht Senden",
+                selectSubject: "Betreff Auswählen",
+                subjects: {
+                    quote: "Projektangebot Anfordern",
+                    villa: "Villenbau",
+                    commercial: "Gewerbebau",
+                    renovation: "Renovierung / Umbau",
+                    general: "Allgemeine Anfrage",
+                    other: "Sonstiges"
+                },
+                placeholders: {
+                    name: "Ihr vollständiger Name",
+                    email: "beispiel@email.com",
+                    phone: "+90 (5XX) XXX XX XX",
+                    message: "Erzählen Sie uns von Ihrem Projekt..."
+                },
+                success: {
+                    title: "Nachricht Gesendet!",
+                    text: "Wir werden uns so schnell wie möglich bei Ihnen melden."
+                },
+                error: {
+                    title: "Ein Fehler ist aufgetreten",
+                    text: "Bitte versuchen Sie es erneut oder rufen Sie uns an."
+                },
+                sending: "Wird gesendet..."
             },
             info: {
                 address: "Adresse",
@@ -477,7 +576,15 @@ const translations = {
             tagline: "Строим будущее с уверенностью",
             pages: "Страницы",
             contact: "Контакты",
-            copyright: "© 2025 MEF Yapı & İnşaat. Все права защищены."
+            followUs: "Подписывайтесь",
+            copyright: "© 2025 MEF Yapı & İnşaat. Все права защищены.",
+            links: {
+                home: "Главная",
+                about: "О нас",
+                corporate: "Компания",
+                vision: "Видение",
+                contact: "Контакты"
+            }
         },
         // Contact Page
         contactPage: {
@@ -488,8 +595,33 @@ const translations = {
                 name: "Полное имя",
                 email: "Эл. почта",
                 phone: "Телефон",
+                subject: "Тема",
                 message: "Ваше сообщение",
-                submit: "Отправить"
+                submit: "Отправить сообщение",
+                selectSubject: "Выберите тему",
+                subjects: {
+                    quote: "Запрос коммерческого предложения",
+                    villa: "Строительство виллы",
+                    commercial: "Коммерческое здание",
+                    renovation: "Ремонт / Реконструкция",
+                    general: "Общий вопрос",
+                    other: "Другое"
+                },
+                placeholders: {
+                    name: "Ваше полное имя",
+                    email: "example@email.com",
+                    phone: "+90 (5XX) XXX XX XX",
+                    message: "Расскажите нам о вашем проекте..."
+                },
+                success: {
+                    title: "Сообщение отправлено!",
+                    text: "Мы свяжемся с вами как можно скорее."
+                },
+                error: {
+                    title: "Произошла ошибка",
+                    text: "Пожалуйста, попробуйте снова или позвоните нам."
+                },
+                sending: "Отправка..."
             },
             info: {
                 address: "Адрес",
