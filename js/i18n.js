@@ -820,6 +820,24 @@ class LanguageManager {
             }
         }
 
+        // Update og:locale based on language
+        const localeMap = { tr: 'tr_TR', en: 'en_US', de: 'de_DE', ru: 'ru_RU' };
+        const ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogLocale && localeMap[lang]) {
+            ogLocale.content = localeMap[lang];
+        }
+
+        // Update language meta tags
+        const langNameMap = { tr: 'Turkish', en: 'English', de: 'German', ru: 'Russian' };
+        const langMeta = document.querySelector('meta[name="language"]');
+        if (langMeta && langNameMap[lang]) {
+            langMeta.content = langNameMap[lang];
+        }
+        const contentLang = document.querySelector('meta[http-equiv="content-language"]');
+        if (contentLang) {
+            contentLang.content = lang;
+        }
+
         // Dispatch custom event
         window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang } }));
     }
