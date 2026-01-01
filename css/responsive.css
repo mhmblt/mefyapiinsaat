@@ -82,6 +82,8 @@
         width: 280px !important;
         height: auto !important;
         max-width: 70vw !important;
+        max-height: none !important;
+        /* style.css'teki 140px kısıtlamasını override et */
         aspect-ratio: 1 / 1 !important;
         object-fit: contain !important;
         /* Margin ve konumlandırma */
